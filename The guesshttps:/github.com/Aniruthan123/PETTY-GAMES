@@ -1,0 +1,11 @@
+input("Think of a number between 0-10 and hit enter")
+input("multiply by three")
+
+
+input("Add 3")
+input(" multiply 2")
+a=int(input("Enter the resulting number:"))
+b=((a/2)-3)/3
+
+print("The number you thought was:",b)
+
