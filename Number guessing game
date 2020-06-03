@@ -1,0 +1,28 @@
+import random 
+print("\tWelcome to 'Guess My Number'!")
+print()
+
+print("I'm thinking of a number between 1 and 100.")
+print("Try to guess it in a few attempts as possible.")
+print()
+
+correctnum = random.randrange(1,101)
+tries = 0
+
+while True: 
+    guessnum = int(input("Take a guess:"))
+    tries += 1
+
+    if guessnum < correctnum:
+        print("Higher...")
+        print()
+        
+    elif guessnum > correctnum:
+        print("Lower...")
+        print()
+        
+    else:
+        print("You guessed it! The number was", correctnum)
+        print()
+        print("And it only took you", tries, "tries!")
+        break
