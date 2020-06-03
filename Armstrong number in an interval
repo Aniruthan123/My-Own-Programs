@@ -1,0 +1,20 @@
+x=int(input("Enter the start of the interval:"))
+y=int(input("Enter the end of the interval:"))
+for num in range(x,y+1):
+      o=len(str(num))
+      s=0 
+      temp=num
+  
+      while temp>0:
+        
+           d=temp%10
+           s+=d**o
+           temp//=10
+      if s==num:
+           print(num)
+      
+ 
+   
+        
+    
+
