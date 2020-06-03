@@ -1,0 +1,21 @@
+import math
+a=int(input("Coefficient of x square:"))
+b=int(input("Coefficient of x:"))
+c=int(input("Constant in the equation:"))
+d=(b*b)-4*a*c
+if d==0:
+    print("Roots are equal")
+    r=-1*b+math.sqrt(d/2*a)
+    print("The roots are:",r,"and",r)
+elif d>1:
+    print("Roots are distinct and not equal:")
+    r1=-1*b+math.sqrt(d/2*a)
+    r2=-1*b-math.sqrt(d/2*a)
+    print("The roots are :",r1,"and",r2)
+elif d<1:
+    print("There are no roots")
+else:
+    print("The roots are imaginary")
+    r1=-1*b+math.sqrt(d/2*a)
+    r2=-1*b-math.sqrt(d/2*a)
+    print("The roots are :",r1,"and",r2)
