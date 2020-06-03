@@ -1,0 +1,38 @@
+import time
+print("Select an operation")
+time.sleep(1)
+print("1.Add")
+time.sleep(0.5)
+print("2.Subtract")
+time.sleep(0.5)
+print("3.Multiply")
+time.sleep(0.5)
+print("4.Divide")
+time.sleep(0.5)
+x=int(input("Enter the number of the operation:"))
+if x==1:
+    a=int(input("Enter the first number:"))
+    b=int(input("Enter the second number:"))
+    c=a+b
+    print(a,"+",b,"=",c)
+    
+elif x==2:
+     a=int(input("Enter the number to be subtracted:"))
+     b=int(input("Enter the number in which the first number should be subtracted from:"))
+    
+     c=b-a
+     print("Ans:",c)
+elif x==3:
+     a =int(input("Enter the first number:"))
+     b=int(input("Enter the second number:"))
+     c=a*b
+     print("Ans:",c)
+elif x==4:
+    a=int(input("Enter the dividend:"))
+    b =int(input("Enter the divisor:"))
+    c=a/b
+    c=a/b
+    print("Ans:",c)
+else:
+    print("Give a valid value")
+    
