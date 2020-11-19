@@ -26,49 +26,41 @@ print("Congratulations" ,d, "Your account has been created in the name of:",d)
 print("Your Mailing Address And Ph.no  Will be:",c,",",f,",",g,",",h,",",e)
 
 
-
+anum=0
 acc = ""
 for i in range(13):
     num = (random.randint(0,9))
     acc += str(num)
 print("Your new account number is     ",acc)
+print("You will have a minimum account balance of Rs.500")
+anum+=500
+time.sleep(2)
 
-time.sleep(1)
-#FUNC1
-def print_req():
-    print("Welcome Again:")
-    print("ENTER 1 TO ATTAIN A DEBIT CARD OR A CREDIT CARD")
-    print("ENTER 2 TO APPLY FOR A LOAN:")
+print("Welcome Again:")
+time.sleep(2)
+print("ENTER 1 TO ATTAIN A DEBIT CARD OR A CREDIT CARD")
+print("ENTER 2 TO APPLY FOR A LOAN:")
     
-    print("ENTER 3 FOR  WITHDRAWLS OR DEPOSITS")
-    print("ENTER 7 FOR FOREIGN EXCHANGE")
-
-    print("ENTER 8 TO KNOW ABOUT YOUR A/C STATUS/BALANCE AFTER A CURRENT DURATION ")
+print("ENTER 3 FOR  WITHDRAWLS OR DEPOSITS")
+print("ENTER 7 FOR FOREIGN EXCHANGE")
+print("ENTER 8 TO KNOW ABOUT YOUR A/C STATUS/BALANCE  ")
     
-    output=int(input("Enter the required number:"))
-    return output
+output=int(input("Enter the required number:"))
+   
 
 
-#FUNC2: CHECK OUTCOME OF FUNC1
-#FUNC1-9
-def select_check():
-    selection = print_req()
-    if selection == 1:
-        select_one()
-
-
-def select_one():  
-        DE=""
-        re=""
-        DE=input("ENTER DR TO APPLY FOR DEBIT CARD,ENTER CR TO APPLY FOR CREDIT CARD:")
-        if DE=="DR":
+if output==1:
+    DE=""
+    re=""
+    DE=input("ENTER DR TO APPLY FOR DEBIT CARD,ENTER CR TO APPLY FOR CREDIT CARD:")
+    if DE=="DR":
             
-            re=int(input("Enter your account number:"))
-            print("Welcome ",d)
-            cx = ""
-            for i in range(16):
-                nume = (random.randint(0,9))
-                cx += str(nume)
+        re=int(input("Enter your account number:"))
+        print("Welcome ",d)
+        cx = ""
+        for i in range(16):
+            nume = (random.randint(0,9))
+            cx += str(nume)
             print("Your new debit card  number is     ",cx )
             oo = ""
             for i in range(3):
@@ -86,7 +78,7 @@ def select_one():
                     oo0 += str(numeroid) 
                 print(oo0,"is your pin number")
         else:
-            eds=int(input("CREDIT CARD CHECK:Enter 1 if you are 21,and with  a job of good income,,,if you have an exception press 2"))
+            eds=int(input("CREDIT CARD CHECK:Enter 1 if you are 21,and with  a job with a 6 digit income,,,if you have an exception press 2"))
             if eds==1:
                 print("you are eligible")
                 oo00 = ""
@@ -113,8 +105,18 @@ def select_one():
             else:
                 print("Sorry,You aren't eligible")
 
-elif selection==2:
-     d09=int(input("ENTER YOUR CIBIL SCORE"))
+elif output==2:
+    print("You will only be considered as a loan candidate only if your CIBIL is above 580:")
+    d09=int(input("ENTER YOUR CIBIL SCORE:"))
+    if d09<=580:
+        print("PLease have a minimum CIBIL score of 580 ")
+    else:
+        print("You are eligible")
+        lml=int(input("Enter the amount you wish to take as a loan"))
+        if lml<=400000:
+            print("The loan amount has been transferred to your account")
+            anum+=lml
+            
       
 
 
