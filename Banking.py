@@ -1,4 +1,4 @@
-mport random
+import random
 
 import time 
 
@@ -23,7 +23,7 @@ e=int(input("Enter your Indian Phone Number: +91"))
 c=input("Enter Your Plot number:")
 f=input("Enter your street name:")
 g=input("Enter your area name:")
-h=input("Enter your City and State")
+h=input("Enter your City and State seperated by a comma:")
 print("Congratulations" ,d, "Your account has been created in the name of:",d)
 print("Your Mailing Address And Ph.no  Will be:",c,",",f,",",g,",",h,",",e)
 
@@ -132,21 +132,23 @@ elif output==3:
     print("Your account balance is ",anum)
     the=int(input("Enter 1 to withdrawl or 2 to deposit"))
     if the==1:
-        def ert():
-         trey=int(input("ENTER THE AMOUNT YOU WISH TO WITHDRAWL:"))
+        
+        trey=int(input("ENTER THE AMOUNT YOU WISH TO WITHDRAWL:"))
          
-         if trey>anum:
+        if trey>anum:
             print("Insufficient Funds")
-            ert()
-         else:
-            anum=anum+trey   
+            
+        else:
+            anum=anum-trey   
             print("Your withdrawl is succesful and your account balance is:",anum) 
+            time.sleep(3)
             welcomeMessage()         
 
     else:
         Trey=int(input("ENTER THE AMOUNT YOU WISH TO DEPOSIT:"))
         anum=anum+Trey
         print("Your new account balance is:",anum)
+        time.sleep(2.88)
         welcomeMessage()
 
 elif output==7:
@@ -164,8 +166,11 @@ elif output==7:
         opu=int(input("Enter the INR amount you are willing to offer for the exchange:"))    
         fgh=opu/55
         print("The amount of aus dollars you will be getiing is:",fgh)
+    time.sleep(2.88)
     welcomeMessage()  
 
 elif output==8:
     print("Your account balance is",anum)    
+    time.sleep(2.88)
     welcomeMessage()
+
